@@ -62,7 +62,7 @@ module WillPaginate
             # seems like the only way
             clean_query.instance_variable_set('@limit', nil)
             clean_query.instance_variable_set('@offset', 0)
-            new_collection(clean_query).count
+            new_collection(clean_query).count(:all)
           end
         end
       end
